@@ -17,7 +17,7 @@ echo "Connected successfully";
         private $servername;
         private $username;
         private $password;
-        private DbConnection $instance = null;
+        private static $instance = null;
 
         private function __construct($servername,$username,$password){
             $this->servername = $servername;
@@ -25,11 +25,11 @@ echo "Connected successfully";
             $this->password = $password;
         }
 
-        if (!$instance) {
-            return new $instance;
+        public static function getInstance($servername,$username,$password){
+            if (!DbConnection::$instance) {
+                DbConnection::$instance = new DbConnection($servername,$username,$password);
+            }
+            return DbConnection::$instance;
         }
-
-
-
     }
 ?>
