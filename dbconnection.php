@@ -30,7 +30,7 @@ class DbConnection{
     }
 
     public function insert($First_name, $Last_name,$Phone_number, $Email,$password){
-        $sql = "INSERT INTO users (First_name, Last_name,Phone_number, Email,password) VALUES (?, ?, ?,?)";
+        $sql = "INSERT INTO users (First_name, Last_name,Phone_number, Email,password) VALUES (?,?,?,?)";
         $stmt = $this->connection->prepare($sql);
         $stmt->bind_param("sssss", $First_name, $Last_name,$Phone_number,$Email,$password);
         
