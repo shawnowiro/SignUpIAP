@@ -19,8 +19,8 @@ class Layout
         <body>
             <nav class="navbar bg-body-tertiary">
                 <form class="container-fluid justify-content-start">
-                    <button class="btn btn-outline-success me-2 bg-red" type="button"> <a href="index.php">Sign Up</a> </button>
-                    <button class="btn btn-outline-success me-2 bg-red" type="button"> <a href="login.php"> Login</a></button>
+                    <a href="index.php"><button class="btn btn-outline-success me-2 bg-red" type="button"> Sign Up </button></a>
+                    <a href="login.php"><button class="btn btn-outline-success me-2 bg-red" type="button"> Login</button></a>
 
                 </form>
             </nav>
