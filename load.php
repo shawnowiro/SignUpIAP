@@ -3,6 +3,6 @@
     require('form.php');
 
     $ObjLayouts = new Layout();
-    $
+    $ObjForms = new forms();
 
 ?>
