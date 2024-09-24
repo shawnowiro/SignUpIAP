@@ -4,7 +4,7 @@ class forms
     public function sign_up_form()
     {
 ?>
-        <div class="row align-items-md-stretch">
+        <div class="form-wrapper row align-items-md-stretch">
             <div class="col-md-8">
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
