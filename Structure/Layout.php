@@ -19,9 +19,9 @@ class Layout
         <body>
             <nav class="navbar bg-body-tertiary">
                 <form class="container-fluid justify-content-start">
-                    <button class="btn btn-outline-success me-2 bg-red" type="button">Sign Up</button>
-                    <button class="btn btn-outline-success me-2 bg-red" type="button">Login </button>
-                    
+                    <button class="btn btn-outline-success me-2 bg-red" type="button"> <a href="index.php">Sign Up</a> </button>
+                    <button class="btn btn-outline-success me-2 bg-red" type="button"> <a href="login.php"> Login</a></button>
+
                 </form>
             </nav>
 
@@ -49,7 +49,7 @@ class Layout
         </body>
 
         </html>
-    <?php
+<?php
     }
 }
 
