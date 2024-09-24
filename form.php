@@ -19,6 +19,10 @@ class forms
                         <label for="username" class="form-label">Username: </label>
                         <input type="text" name="username" class="form-control form-control-lg" id="email" placeholder="Enter your username" maxlength="50">
                     </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone number: </label>
+                        <input type="text" name="phone" class="form-control form-control-lg" id="email" placeholder="Enter your phone number" maxlength="50">
+                    </div>
                     <div class="col-12">
                         <button class="btn btn-primary" name="signup" type="submit">Sign Up </button>
                     </div>
