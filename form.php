@@ -20,7 +20,7 @@ class forms
                         <input type="text" name="username" class="form-control form-control-lg" id="email" placeholder="Enter your username" maxlength="50">
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-primary" name="signup" type="submit">Sign Up</button>
+                        <button class="btn btn-primary" name="signup" type="submit">Sign Up </button>
                     </div>
                 </form>
             </div>
