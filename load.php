@@ -5,8 +5,9 @@
     $servername = "localhost";
     $username = "root";
     $password = "Ochiengowiro37";
+    $db= "userdb";
     $ObjLayouts = new Layout();
     $ObjForms = new forms();
-    $ObjDb = new DbConnection($servername,$username,$password);
+    $ObjDb = new DbConnection($servername,$username,$password,$db);
 
 ?>
