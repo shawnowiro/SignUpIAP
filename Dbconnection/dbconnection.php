@@ -3,7 +3,7 @@
 
 
 class DbConnection{
-    protected $servername;
+    public $servername;
     protected $username;
     protected $password;
     protected $db;
