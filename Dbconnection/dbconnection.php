@@ -3,19 +3,15 @@
 
 
 class DbConnection{
-    public $servername;
-    protected $username;
-    protected $password;
-    protected $db;
+    public $servername = "localhost";
+    public $username = "root";
+    public $password = "Ochiengowiro37";    
+    protected $db = "Userdb";
     private static $instance = null;
     private $connection;
 
-    public function __construct($servername,$username,$password,$db){
-        $this->servername = $servername;
-        $this->username = $username;
-        $this->password = $password;
-        $this->db = $db;
-        $this->connection = new mysqli($servername, $username, $password,$db);
+    public function __construct(){
+        $this->connection = new mysqli($this->servername, $this->username, $this->password, $this->db);
         if ($this->connection->connect_error) {
             die("Connection failed: " . $this->connection->connect_error);
         }
@@ -23,9 +19,9 @@ class DbConnection{
 
     }
 
-    public static function getInstance(){
+    public function getInstance(){
         if (!DbConnection::$instance) {
-            DbConnection::$instance = new DbConnection($servername,$username,$password,$db);
+            DbConnection::$instance = new DbConnection();
         }
         return DbConnection::$instance;
     }
