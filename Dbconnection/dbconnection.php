@@ -1,8 +1,6 @@
 <?php
 
-$servername = "localhost";
-$username = "username";
-$password = "password";
+
 
 class DbConnection{
     private $servername;
@@ -11,7 +9,7 @@ class DbConnection{
     private static $instance = null;
     private $connection;
 
-    private function __construct($servername,$username,$password){
+    public function __construct($servername,$username,$password){
         $this->servername = $servername;
         $this->username = $username;
         $this->password = $password;
@@ -19,7 +17,7 @@ class DbConnection{
         if ($this->connection->connect_error) {
             die("Connection failed: " . $this->connection->connect_error);
         }
-        echo "Connected successfully";
+
     }
 
     public static function getInstance($servername,$username,$password){

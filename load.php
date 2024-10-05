@@ -3,9 +3,10 @@
     require('form.php');
     require('Dbconnection/dbconnection.php');
     $servername = "localhost";
-    $username = "username";
-    $password = "password";
+    $username = "root";
+    $password = "Ochiengowiro37";
     $ObjLayouts = new Layout();
     $ObjForms = new forms();
+    $ObjDb = new DbConnection($servername,$username,$password);
 
 ?>
