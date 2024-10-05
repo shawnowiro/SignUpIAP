@@ -1,5 +1,5 @@
 <?php
-require("../load.php");
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -7,10 +7,12 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 require '../PHPMailer-master/PHPMailer-master/vendor/autoload.php';
+require("../load.php");
 session_start();
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
+$_SESSION['verified'] = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
     $First_name = $_POST['FirstName'];
     $Last_name = $_POST['LastName'];
@@ -70,26 +72,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
 
             $mail->send();
             echo 'Message has been sent';
+
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
-
+        $ObjDb->insert(
+            $First_name,
+            $Last_name,
+            $Phone_number,
+            $Email,
+            $password
+        );
         header("Location: OTPverify.php");
         exit();
     }
 }
-class signupAuth{
-
-    public static function signup() {
-        // require("../load.php");
-        $ObjDb->insert($First_name, $Last_name, $Phone_number, $Email, $password);
-
-    }
-}
-
-?>
-
-<?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
-

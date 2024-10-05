@@ -23,7 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($inputOtp == $generatedOtp) {
         echo "OTP verified successfully.";
-        signupAuth::signup();
+        $_SESSION['verified'] = true;
+        // Signup::insertDB();
         header("Location: ../login.php");
         exit();
         // Proceed with further actions, such as user registration completion
