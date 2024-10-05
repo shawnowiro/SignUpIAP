@@ -8,7 +8,7 @@ class forms
             <div class="col-md-8">
                 <form action="Auth/SignupAuth.php" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="fullname" class="form-label">Fullname: </label>
+                        <label for="Firstname" class="form-label">Fullname: </label>
                         <input type="text" name="fullname" class="form-control form-control-lg" id="fullname" placeholder="Enter your fullname" maxlength="50" autofocus>
                     </div>
                     <div class="mb-3">
