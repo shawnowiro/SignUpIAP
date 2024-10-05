@@ -25,6 +25,9 @@ class DbConnection{
         }
         return DbConnection::$instance;
     }
+    public function getConnection(){
+        return $this->connection;
+    }
 
     public function insert($First_name, $Last_name,$Phone_number, $Email,$password){
         $sql = "INSERT INTO users (First_name, Last_name,Phone_number, Email,password) VALUES (?,?,?,?,?)";

@@ -6,6 +6,6 @@
     $db= "userdb";
     $ObjLayouts = new Layout();
     $ObjForms = new forms();
-    $ObjDb = new DbConnection($servername,$username,$password,$db);
+    $ObjDb = new DbConnection();
 
 ?>

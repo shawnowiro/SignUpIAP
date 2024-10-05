@@ -27,6 +27,10 @@ class forms
                         <label for="phone" class="form-label">Phone number: </label>
                         <input type="text" name="Phone" class="form-control form-control-lg" id="email" placeholder="Enter your phone number" maxlength="50">
                     </div>
+                    <div class="mb-3">
+                        <label for="Password" class="form-label">Password: </label>
+                        <input type="password" name="Password" class="form-control form-control-lg" id="email" placeholder="Enter your password" maxlength="50">
+                    </div>
                     <div class="col-12">
                         <button class="btn btn-primary" name="signup" type="submit">Sign Up </button>
                     </div>
